@@ -31,6 +31,23 @@ router.get("/:id", (req, res) => {
     }
 });
 
+//get action by project id
+router.get("/:id/actions", (req, res) =>{
+    const id = req.params.id;
+
+    projectDB.getProjectActions(id)
+    .then(actions =>{
+        if(actions){
+            res.status(200).json(actions);
+        } else {
+            res.status(404).json({ message: "No actions found"});
+        }
+    })
+    .catch(error => {
+        res.status(500).json({ message: "An error occured while retrieving actions"});
+    });
+});
+
 //add a new project
 router.post("/", (req, res) => {
     const name = req.body.name;

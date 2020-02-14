@@ -5,14 +5,14 @@ const projectRouter = require('./data/routers/projectRouter');
 const server = express();
 server.use(express.json());
 
-server.use('/api/:id/actions', logger, actionRouter);
-server.use('/api/projects', logger, projectRouter);
+server.use('/:id/actions', logger, actionRouter);
+server.use('/', logger, projectRouter);
 
-server.get('/', (req, res) => {
-    res.send(
-        `<h2> Welcome to Node API Sprint Challenge! </h2>`
-    );
-});
+// server.get('/home', (req, res) => {
+//     res.send(
+//         `<h2> Welcome to Node API Sprint Challenge! </h2>`
+//     );
+// });
 
 //global middleware
 
