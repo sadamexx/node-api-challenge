@@ -39,14 +39,19 @@ Commit your code regularly and use descriptive messages. This helps both you (in
 Demonstrate your understanding of this Sprint's concepts by answering the following free-form questions. Edit this document to include your answers after each question. Make sure to leave a blank line above and below your answer so it is clear and easy to read by your Team Lead.
 
 - [ ] Mention two parts of Express that you learned about this week.
+I learned that ExpressJS is a javascript framework that sits on top of the NodeJS server. Its a library that adds functionality such as routing and middleware. Its like React but for the backend. You can build it to build RESTful web services that work with JSON. It’s light weight, simple, compatible with connect middleware and unopinionated.
 
 - [ ] Describe Middleware?
+Middleware is a way to add more features to Express. It’s like an array of functions that get executed in the order they are introduced. There are three types, built in, third part, and custom. Built in middleware is included with Express but we do need to opt in to using it. Third party means another set of developers saw the need for it, they built it, and we can download it through npm and use it in our app. Lastly, we can build custom middleware in our own App with vanilla JavaScript.
 
 - [ ] Describe a Resource?
 
+
 - [ ] What can the API return to help clients know if a request was successful?
+An API can return a status to a client to help relay if a request was successful or if there was a problem. There is a list of HTTP statuses, and we also have the option of delivering a message with that status as well. 
 
 - [ ] How can we partition our application into sub-applications?
+We can use server side routing to help build several endpoints.It’s like a mini express application.
 
 ## Minimum Viable Product
 
